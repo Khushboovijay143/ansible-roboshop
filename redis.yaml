@@ -12,8 +12,7 @@
     #   ansible.builtin.command: yum module enable redis:remi-6.2
     
     - name: Enable the redis module for version 6.2
-      shell: |
-        dnf module enable redis:remi-6.2 -y
+      ansible.builtin.shell: "dnf module enable redis:remi-6.2 -y"
       args:
         warn: no    
 
